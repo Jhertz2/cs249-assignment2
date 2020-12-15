@@ -19,7 +19,7 @@ limitations under the License.
 
 // Flash the blue LED after each inference
 void RespondToDetection(tflite::ErrorReporter* error_reporter,
-                        int8_t person_score, int8_t no_person_score) {
+                        int8_t no_deer_score, int8_t deer_score) {
   static bool is_initialized = false;
   if (!is_initialized) {
     // Pins for the built-in RGB LEDs on the Arduino Nano 33 BLE Sense
@@ -51,6 +51,6 @@ void RespondToDetection(tflite::ErrorReporter* error_reporter,
     digitalWrite(LEDR, LOW);
   }
 
-  TF_LITE_REPORT_ERROR(error_reporter, "Person score: %d No person score: %d",
-                       person_score, no_person_score);
+  TF_LITE_REPORT_ERROR(error_reporter, "Deer score: %d No deer score: %d",
+                       deer_score, no_deer_score);
 }
