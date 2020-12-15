@@ -1,3 +1,11 @@
+# Deer Detection Final Project
+John Alling \
+Dovran Amanov
+
+This code was heavily influenced by the work for assignment-2, but utilizing the transfer learning component to be for a deer detection system.
+Many thanks to Srivatsan Krishnan for creating the assignment which we have adapted.
+
+# ----- Original README -----
 # CS249-Assignment 2
 Code and other scripts needed for assignment-2 (CS249-Fall 2020 Assignment 2)
 
