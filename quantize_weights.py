@@ -42,7 +42,7 @@ converter.optimizations = [tf.lite.Optimize.DEFAULT]
 converter.representative_dataset = representative_dataset_gen
 
 tflite_quant_model = converter.convert()
-open("person_detection.tflite", "wb").write(tflite_quant_model)
+open("deer_detection.tflite", "wb").write(tflite_quant_model)
 
 
 
