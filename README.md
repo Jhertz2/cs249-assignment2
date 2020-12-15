@@ -1,9 +1,11 @@
 # Deer Detection Final Project
 John Alling \
-Dovran Amanov
+Dovran Amanov \
 
 This code was heavily influenced by the work for assignment-2, but utilizing the transfer learning component to be for a deer detection system.
-Many thanks to Srivatsan Krishnan for creating the assignment which we have adapted.
+Many thanks to Srivatsan Krishnan for creating the assignment which we have adapted. 
+### Colab Notebook
+A link to the colab notebook used for this transfer learning process can be found [here](https://colab.research.google.com/drive/1WLb8Krss2caHLT4vQ3pwjzxyIxZJ69DW?usp=sharing)
 
 # ----- Original README -----
 # CS249-Assignment 2
