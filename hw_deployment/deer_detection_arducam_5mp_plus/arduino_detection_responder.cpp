@@ -41,16 +41,20 @@ void RespondToDetection(tflite::ErrorReporter* error_reporter,
   delay(100);
   digitalWrite(LEDB, HIGH);
 
-  // Switch on the green LED when a person is detected,
-  // the red when no person is detected
-  if (person_score > no_person_score) {
+  // Switch on the green LED when a deer is detected,
+  // the red when no deer is detected
+  
+  //if (deer_score > no_deer_score) {
+  if (deer_score > -20) {
     digitalWrite(LEDG, LOW);
     digitalWrite(LEDR, HIGH);
+    TF_LITE_REPORT_ERROR(error_reporter,"----DEER DETECTED IN ROADWAY----\n");
   } else {
     digitalWrite(LEDG, HIGH);
     digitalWrite(LEDR, LOW);
+    TF_LITE_REPORT_ERROR(error_reporter,"--Roadway is clear--\n");
   }
 
-  TF_LITE_REPORT_ERROR(error_reporter, "Deer score: %d No deer score: %d",
-                       deer_score, no_deer_score);
+  //TF_LITE_REPORT_ERROR(error_reporter, "Deer score: %d No deer score: %d",
+  //                     deer_score, no_deer_score);
 }

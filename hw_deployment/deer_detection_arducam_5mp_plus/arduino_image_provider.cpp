@@ -100,7 +100,7 @@ TfLiteStatus InitCamera(tflite::ErrorReporter* error_reporter) {
 
 // Begin the capture and wait for it to finish
 TfLiteStatus PerformCapture(tflite::ErrorReporter* error_reporter) {
-  TF_LITE_REPORT_ERROR(error_reporter, "Starting capture");
+  //TF_LITE_REPORT_ERROR(error_reporter, "Starting capture");
   // Make sure the buffer is emptied before each capture
   myCAM.flush_fifo();
   myCAM.clear_fifo_flag();
@@ -121,8 +121,8 @@ TfLiteStatus ReadData(tflite::ErrorReporter* error_reporter) {
   // This represents the total length of the JPEG data
   jpeg_length = myCAM.read_fifo_length();
   //delay(2000);
-  TF_LITE_REPORT_ERROR(error_reporter, "Reading %d bytes from Arducam",
-                       jpeg_length);
+  //TF_LITE_REPORT_ERROR(error_reporter, "Reading %d bytes from Arducam",
+  //                     jpeg_length);
   // Ensure there's not too much data for our buffer
   if (jpeg_length > MAX_JPEG_BYTES) {
     TF_LITE_REPORT_ERROR(error_reporter, "Too many bytes in FIFO buffer (%d)",
@@ -139,7 +139,7 @@ TfLiteStatus ReadData(tflite::ErrorReporter* error_reporter) {
     jpeg_buffer[index] = SPI.transfer(0x00);
   }
   delayMicroseconds(15);
-  TF_LITE_REPORT_ERROR(error_reporter, "Finished reading");
+  //TF_LITE_REPORT_ERROR(error_reporter, "Finished reading");
   myCAM.CS_HIGH();
   return kTfLiteOk;
 }
@@ -148,8 +148,8 @@ TfLiteStatus ReadData(tflite::ErrorReporter* error_reporter) {
 TfLiteStatus DecodeAndProcessImage(tflite::ErrorReporter* error_reporter,
                                    int image_width, int image_height,
                                    int8_t* image_data) {
-  TF_LITE_REPORT_ERROR(error_reporter,
-                       "Decoding JPEG and converting to greyscale");
+  //TF_LITE_REPORT_ERROR(error_reporter,
+   //                    "Decoding JPEG and converting to greyscale");
   // Parse the JPEG headers. The image will be decoded as a sequence of Minimum
   // Coded Units (MCUs), which are 16x8 blocks of pixels.
   JpegDec.decodeArray(jpeg_buffer, jpeg_length);
@@ -229,7 +229,7 @@ TfLiteStatus DecodeAndProcessImage(tflite::ErrorReporter* error_reporter,
       }
     }
   }
-  TF_LITE_REPORT_ERROR(error_reporter, "Image decoded and processed");
+  //TF_LITE_REPORT_ERROR(error_reporter, "Image decoded and processed");
   return kTfLiteOk;
 }
 
