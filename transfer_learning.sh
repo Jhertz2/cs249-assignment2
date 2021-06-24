@@ -1,6 +1,6 @@
-python train_image_classifier.py \
-    --train_dir=transfer_learning 
-    --dataset_dir=C:\workspace\cs249-assignment2-module-2\data\mask_detection \
+python /content/cs249-assignment2/train_image_classifier.py \
+    --train_dir=transfer_learning \
+    --dataset_dir=/content/dataset_1/ \
     --dataset_name=visualwakewords \
     --dataset_split_name=train \
     --preprocessing_name=mobilenet_v1 \
@@ -14,7 +14,7 @@ python train_image_classifier.py \
     --num_epochs_per_decay=2.5 \
     --moving_average_decay=0.9999 \
     --use_grayscale=True \
-    --checkpoint_path=C:\workspace\cs249-assignment2-module-2\transfer_learning\model.ckpt-1000000 \
+    --checkpoint_path=/content/cs249-assignment2/ckpts/person_detection/ \
     --checkpoint_exclude_scopes= MobilenetV1/Logits,MobilenetV1/Predictions \
     --trainable_scopes= MobilenetV1/Logits,MobilenetV1/Predictions
 
