@@ -1,3 +1,3 @@
- python datasets\download_and_convert_data.py \
-    --dataset_name=custom \
-    --dataset_dir=C:\workspace\cs249-assignment2-module-2\data\mask_detection
+ python /content/cs249-assignment2/datasets/download_and_convert_custom.py \
+    --dataset_name=TL_Datasets \
+    --dataset_dir=/content/gdrive/MyDrive/
