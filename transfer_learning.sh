@@ -1,13 +1,13 @@
 python /content/cs249-assignment2/train_image_classifier.py \
     --train_dir=/content/transfer_learning \
-    --dataset_dir=/content/pill_data \
+    --dataset_dir=/content/gdrive/MyDrive/pill_data \
     --dataset_name=visualwakewords \
     --dataset_split_name=train \
     --preprocessing_name=mobilenet_v1 \
     --model_name=mobilenet_v1_025 \
     --train_image_size=96 \
     --save_summaries_secs=300 \
-    --max_number_of_steps=1005000 \
+    --max_number_of_steps=1050000 \
     --learning_rate=0.045 \
     --label_smoothing=0.1 \
     --learning_rate_decay_factor=0.98 \
