@@ -1,5 +1,5 @@
 python /content/cs249-assignment2/train_image_classifier.py \
-    --train_dir=/content/transfer_learning \
+    --train_dir=/content/gdrive/MyDrive/transfer_learning \
     --dataset_dir=/content/gdrive/MyDrive/pill_data \
     --dataset_name=visualwakewords \
     --dataset_split_name=train \
@@ -14,7 +14,7 @@ python /content/cs249-assignment2/train_image_classifier.py \
     --num_epochs_per_decay=2.5 \
     --moving_average_decay=0.9999 \
     --use_grayscale=True \
-    --checkpoint_path=/content/transfer_learning/model.ckpt-1000000 \
+    --checkpoint_path=/content/gdrive/MyDrive/transfer_learning/model.ckpt-1000000 \
     --checkpoint_exclude_scopes= MobilenetV1/Logits,MobilenetV1/Predictions \
     --trainable_scopes= MobilenetV1/Logits,MobilenetV1/Predictions
 
